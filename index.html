@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagrume 2</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #2fa6a0;
+        }
+        /* Écran de chargement */
+        #loader {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        #loader img {
+            width: 140px;
+        }
+        /* Page principale */
+        #app {
+            display: none;
+            background: #2fa6a0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        .grid {
+            background: white;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .grid img {
+            width: 100%;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="loader">
+    <img src="https://forum-dessine.fr/img/auteurs/avatars/filo.jpeg" alt="Instagrume">
+    <p>Instagrume</p>
+</div>
+
+<div id="app">
+    <header>
+        <h1>Instagrume 🍋</h1>
+    </header>
+
+    <div class="grid">
+        <img src="img1.jpg" alt="">
+        <img src="img2.jpg" alt="">
+        <img src="img3.jpg" alt="">
+        <img src="img4.jpg" alt="">
+        <img src="img5.jpg" alt="">
+        <img src="img6.jpg" alt="">
+    </div>
+</div>
+
+<script>
+    setTimeout(function () {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('app').style.display = 'block';
+    }, 2000);
+</script>
+
+</body>
+</html>
